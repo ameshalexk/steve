@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fetch in Under Five Minutes</title>
+    <meta name="viewport" content="width=device-width">
+
+</head>
+<body>
+    <h1>Fetch Under Five</h1>
+    <p>How to use fetch( ) for AJAX in less than five minutes.</p>
+    <div id="output">
+        <pre></pre>
+    </div>
+    <script>
+        let url = "https://pokeapi.co/api/v2/pokemon/pikachud";
+
+        fetch(url)
+        .then(response => response.json() )
+        .then(data => {
+            let str = JSON.stringify(data, null, '\t');
+            //output the string version of the JSON data as preformatted text
+            //document.querySelector('#output pre').textContent = str;
+            //output the postId from the first object in the data array
+            document.querySelector('#output').textContent = str;
+        })
+        .catch(err => {
+            let nm = err.name;  //Error Type
+            let msg = err.message;  //The error message
+            alert(`CATCH: ${nm} ${msg}`);
+        });
+
+    </script>
+</body>
+</html>
