@@ -22,7 +22,7 @@
             //output the string version of the JSON data as preformatted text
             //document.querySelector('#output pre').textContent = str;
             //output the postId from the first object in the data array
-            document.querySelector('#output').textContent = str;
+            document.querySelector('#output pre').textContent = str;
         })
         .catch(err => {
             let nm = err.name;  //Error Type

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Promise all() and Fetch</title>
+    <meta name="viewport" content="width=device-width">
+    <style>
+        p{
+            font-size: 2rem;
+            font-weight: 900;
+            color: crimson;
+        }
+    </style>
+</head>
+<body>
+    <h1>Using Promise all() with fetch</h1>
+    <div id="output">
+        <!-- display the results here -->
+    </div>
+    <script>
+        //we want to fetch multiple things
+        //or multiple copies of the same thing
+        let log = console.log;
+
+        let datafile1 = fetch('./data.json');
+        let datafile2 = fetch('./data.json');
+
+        Promise.all([datafile1, datafile2])
+        .then( files =>{
+            files.forEach(file=>{
+                process( file.json() );
+            })
+            //files[0].json()
+            //files[1].json()
+        })
+        .catch(err=>{
+
+        });
+
+        let process = (prom) =>{
+            prom.then(data=>{
+                let p = document.createElement('p');
+                p.textContent = JSON.stringify(data);
+                document.getElementById('output').appendChild(p);
+            })
+        }
+
+    </script>
+</body>
+</html>
