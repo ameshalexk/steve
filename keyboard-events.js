@@ -17,9 +17,9 @@ function anyKey(ev){
     let target = ev.currentTarget;
     let tag = target.tagName;
     let char = ev.char || ev.charCode || ev.which;
-    //log(char, tag);
+    log(char, tag);
     let s = String.fromCharCode(char);
-    //log(s);
+    log(s);
     switch(char){
         case 37:
             log('LEFT');
