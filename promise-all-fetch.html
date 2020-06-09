@@ -13,7 +13,13 @@
     </style>
 </head>
 <body>
-    <h1>Using Promise all() with fetch</h1>
+    <main class="maind">
+        <h1>Using Promise all() with fetch
+            <span>
+                <p id="para"> lold </p>
+        </span>
+        </h1>
+    </main>
     <div id="output">
         <!-- display the results here -->
     </div>
@@ -44,6 +50,40 @@
                 document.getElementById('output').appendChild(p);
             })
         }
+        // let main = document.querySelector("main");
+        // let h = main.children[0];
+        // let s = h.children[0];
+        // let p = s.children[0];
+
+        // // let f = h.children[0];
+
+        // console.log(main);
+        // console.log(h);
+        // console.log(s);
+        // console.log(p);
+        // let bool = main.contains(p);
+        // console.log(bool);
+        // console.log(p.parentNode);
+
+        let span = document.createElement('span');
+        span.textContent = " tests span 23456789";
+        let span2 = document.createElement('span');
+        span2.textContent = " tests span 23456dwdwdwdwdw789";
+        let html = 'tests html23456789';
+        let txt = 'tests txt23456789';
+        let pst = 'tests pst23456789';
+        let p = document.querySelector("#para");
+        let lool = document.getElementsByClassName("maind");
+
+        p.insertAdjacentElement('beforebegin', span);
+        p.insertAdjacentElement('afterbegin', span2);
+
+        p.insertAdjacentHTML('afterbegin', html);
+        p.insertAdjacentHTML('afterbegin', txt);
+        console.log(lool);
+        lool.insertAdjacentElement('beforebegin', html);
+
+
 
     </script>
 </body>

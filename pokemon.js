@@ -36,6 +36,11 @@ fetch(req)
             df.appendChild(li);
         });
         ul.appendChild(df);
+        console.log(document.body.h1.typeNode);
+        console.log(document.body.script);
+        console.log(document.body.querySelector('script'));
+        console.log(document.body.querySelectorAll('script').firstelementchild);
+
     })
     .catch( (err) =>{
         console.log('ERROR:', err.message);
