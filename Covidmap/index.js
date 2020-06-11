@@ -24,6 +24,19 @@ function updateMAP() {
                 .setLngLat([lon, lat])
                 .addTo(map);
 
+            document.getElementById('fly').addEventListener('click', function () {
+                // Fly to a random location by offsetting the point -74.50, 40
+                // by up to 5 degrees.
+                map.flyTo({
+                    center: [
+                        -74.5 + (Math.random() - 0.5) * 10,
+                        40 + (Math.random() - 0.5) * 10
+                    ],
+                    essential: true // this animation is considered essential with respect to prefers-reduced-motion
+                });
+            });
+
+
         });
     })
     }
