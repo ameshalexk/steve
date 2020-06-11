@@ -43,8 +43,9 @@ function updateMAP() {
                 // by up to 5 degrees.
                 map.flyTo({
                     center: [
-                        -77.0369,38.9072
+                         -77.208137, 38.902710
                     ],
+                    zoom: 11,
                     essential: true // this animation is considered essential with respect to prefers-reduced-motion
                 });
             });
