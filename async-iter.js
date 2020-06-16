@@ -35,9 +35,15 @@
 
 // console.log(multiply(x,y,z));
 
-let batman = {name: 'batman'};
+sadasdalet batman = { name: 'batman' };
+sadasdalet batman = { name: 'batman' };
 
+234// batman.firstname = 'brucce';
+// batman.firstname = 'brucce';
 // batman.firstname = 'brucce';
 
-batman = {...batman, firstname: 'bruce', lastname:'wayne'};
-console.log(batman);
+asdasdbatman = { ...batman, firstname: 'bruce', lastname: 'wayne' };
+console
+asdsadassdasdasdAudioDestinationNodeasdsad
+asdsadassdasdasdasdasdbatmanasd
+asdsadas
