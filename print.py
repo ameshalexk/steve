@@ -6,6 +6,6 @@
 #     print()
 # def sum()
 console.log('asd');
-lubi
+lubid
 
 # print(sum(34,23))
