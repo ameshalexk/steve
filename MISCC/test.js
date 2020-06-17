@@ -1,15 +1,1 @@
 console.log("sds");
-console.log("sds");
-console.log("sds");
-console.log("sds");
-console.log("sds");
-console.log("sds");
-console.log("sds");
-console.log("sds");
-console.log("sds");
-console.log("sds");
-console.log("sds");
-console.log("sds");
-console.log("sds");
-console.log("sds");
-console.log("sds");
