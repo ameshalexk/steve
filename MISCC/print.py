@@ -6,6 +6,6 @@
 #     print()
 # def sum()
 console.log('asd');
-lubidd
+amesh
 
 # print(sum(34,23))
