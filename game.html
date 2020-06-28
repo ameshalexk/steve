@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lapis Papyrus Scalpellus</title>
+  </head>
+  <body>
+      <h1 id="title">Welcome to the GAME!!</h1>
+      <form action="button">Choose Weapon : <br>
+        <input type="radio" value="radios" name="lool" class="radiod"> Lapis <br>
+        <input type="radio" value="radios" name="lool" class="radiod"> Papyrus <br>
+        <input type="radio" value="radios" name="lool" class="radiod"> Scalpellus <br>
+      </form>
+
+
+      <p>RESULTS : </p>
+
+
+      <button id="generate-greeting">Hello</button>
+<br/>
+<br/>
+<label for="new-todo">Add a new item to the list:</label>
+<input id="new-todo" type="text">
+<button id="generate-todo">Add to the List!</button>
+<h1>List of things to do</h1>
+<ul class="todos">
+</ul>
+
+
+
+  </body>
+<script>
+
+function insertItem() {
+  const newTodo = document.querySelector('#new-todo').value;
+  const newItem = document.createElement('li');
+  newItem.innerText = newTodo;
+  newItem.onclick = function(e) {
+    e.target.style.textDecoration = 'line-through';
+    console.log(e.target);
+  }
+  document.querySelector('.todos').appendChild(newItem);
+  document.querySelector('#new-todo').value = null;
+}
+
+document.querySelector('#generate-todo').addEventListener('click',insertItem);
+
+// PROBLEM 3
+// When the user clicks any of the li items you've added, cross it out (add styling to create the line through effect)
+// This will involve attaching a listener to each <li> as you add them
+// You will have to modify the code you've written above!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// elementToGrab().onclick = function() {
+//    console.log("test");
+// };
+
+
+
+
+
+
+
+const player = {
+    currentChoice: null
+  }
+  const computer = {
+    currentChoice: null
+  }
+  const choices = ["Lapis", "Papyrus", "Scalpellus"];
+  // Here's where the player makes their choice. Try changing the index in the line below to test out the conditional!
+  player.currentChoice = choices[0];
+
+  // Here, we're wrapping the randomIndex generator, which helps us determine the computer's choice, in a new function called computerChooses
+  function computerChooses(){
+    const randomIndex = Math.floor(Math.random() * choices.length);
+    return computer.currentChoice = choices[randomIndex];
+  }
+
+  // Here, we're wrapping our conditional logic in a function called compareChoices. The code itself doesn't change, but now we have a function that we can easily invoke later in the program. We'll call the computerChooses function here to generate the computer's random choice.
+  function compareChoices(){
+    computerChooses();
+    if(computer.currentChoice === player.currentChoice){
+      displayResult("It's a tie! The computer and player both chose " + computer.currentChoice);
+    }else if(computer.currentChoice === choices[0]){
+      if(player.currentChoice === choices[1]){
+        displayResult("The player wins! The computer chose " + computer.currentChoice + " and the player chose " + player.currentChoice);
+      }else{
+        displayResult("The computer wins! The computer chose " + computer.currentChoice + " and the player chose " + player.currentChoice);
+      }
+    }else if(computer.currentChoice === choices[1]){
+      if(player.currentChoice === choices[2]){
+        displayResult("The player wins! The computer chose " + computer.currentChoice + " and the player chose " + player.currentChoice);
+      }else{
+        displayResult("The computer wins! The computer chose " + computer.currentChoice + " and the player chose " + player.currentChoice);
+      }
+    }else if(computer.currentChoice === choices[2]){
+      if(player.currentChoice === choices[0]){
+        displayResult("The player wins! The computer chose " + computer.currentChoice + " and the player chose " + player.currentChoice);
+      }else{
+        displayResult ("The computer wins! The computer chose " + computer.currentChoice + " and the player chose " + player.currentChoice);
+      }
+    }
+  }
+
+  // Finally, don't forget to invoke the function!
+
+
+  function displayResult(result) {
+    const resultText = document.createElement('p');
+    resultText.innerText = result;
+    document.body.appendChild(resultText);
+  }
+
+  compareChoices();
+
+</script>
+
+</html>
