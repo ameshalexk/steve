@@ -15,9 +15,9 @@ function updateMAP() {
             })
         );
         lol.forEach(element => {
-            console.log(element.attributes.Lat);
-            console.log(element.attributes.Long_);
-            console.log(element.attributes.Confirmed);
+            // console.log(element.attributes.Lat);
+            // console.log(element.attributes.Long_);
+            // console.log(element.attributes.Confirmed);
 
 
             lat = element.attributes.Lat;
